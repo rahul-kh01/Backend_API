@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.cinema.auth.entities.User;
 
 /**
- * @author vikash katiyar
+ * @author rahul khandelwal
  *
  */
 public interface UserRepository extends JpaRepository<User, Integer> {

@@ -4,7 +4,7 @@
 package com.cinema.utils;
 
 /**
- * @author vikash katiyar
+ * @author rahul khandelwal
  *
  */
 public class AppConstants {

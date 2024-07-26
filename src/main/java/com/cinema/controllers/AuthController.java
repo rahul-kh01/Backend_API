@@ -21,7 +21,7 @@ import com.cinema.auth.utils.RefreshTokenRequest;
 import com.cinema.auth.utils.RegisterRequest;
 
 /**
- * @author vikash katiyar
+ * @author rahul khandelwal
  *
  */
 

@@ -1,8 +1,7 @@
 # 🚀 **Spring Boot MovieAPI Backend**
 
 ---
-
-The Spring Boot MovieAPI Backend is a powerful Java 17 application crafted to manage movie data efficiently. It prioritizes performance, security, and modularity, incorporating features like file handling, pagination, JWT authentication, and a three-layered architecture. Explore a seamless movie data experience with this backend! 🎥🍿
+The Spring Boot MovieAPI Backend is a robust Java 17 application designed for efficient movie data management. It focuses on high performance, security, and modularity, offering features such as file handling, pagination, JWT authentication, and a three-layered architecture. Dive into a smooth and efficient movie data experience with this backend! 🎥🍿
 
 # 🚀 **Technology Used:**
 ---
@@ -20,117 +19,87 @@ The Spring Boot MovieAPI Backend is a powerful Java 17 application crafted to ma
 ---
 
 - **File Handling:**
+📁 Effortless media storage for quick and efficient retrieval.
+🖼️ Handles images and other movie-related assets with ease.
 
-  - 📁 Seamless media storage for efficient retrieval.
-  - 🖼️ Manages images and other movie-related assets.
+- **Pagination**:
+🔍 Improves data presentation.
+🚀 Optimizes resource usage.
+📑 Fetches data in manageable chunks for better performance.
+JWT Authentication:
+🔐 Enhances security.
+🔑 Uses JSON Web Token (JWT) authentication.
+🛡️ Restricts access to sensitive movie data to authorized users only.
+Three-Layered Architecture:
+🏗️ Ensures a modular codebase for easier maintenance and scalability.
+🎯 Separates presentation, business logic, and data access layers.
+🔍 Simplifies debugging, testing, and future updates.
+🚀 MovieAPI Endpoints
+🔗 Add Movie:
+POST http://localhost:8080/api/v1/movie/add-movie
 
-- **Pagination:**
+🔍 Get All Movies:
+GET http://localhost:8080/api/v1/movie/all
 
-  - 🔍 Enhances data presentation.
-  - 🚀 Optimizes resource usage.
-  - 📑 Retrieves data in manageable chunks for improved performance.
+🔍 Get Movie by ID:
+GET http://localhost:8080/api/v1/movie/1
 
-- **JWT Authentication:**
+📁 Get Profile Picture:
+GET http://localhost:8080/file/profile-pic
 
-  - 🔐 Prioritizes security.
-  - 🔑 Implements JSON Web Token (JWT) authentication.
-  - 🛡️ Ensures only authorized users access and interact with sensitive movie data.
+🔄 Update Movie by ID:
+PUT http://localhost:8080/api/v1/movie/update/1
 
-- **Three-Layered Architecture:**
-  - 🏗️ Modular codebase for maintainability and scalability.
-  - 🎯 Separation into presentation, business logic, and data access layers.
-  - 🔍 Facilitates easier debugging, testing, and future enhancements.
+❌ Delete Movie by ID:
+DELETE http://localhost:8080/api/v1/movie/delete/2
 
-## 🚀 **MovieAPI Endpoints**
+📑 Get Movies with Pagination:
+GET http://localhost:8080/api/v1/movie/allMoviesPage?pageNumber=0&pageSize=2
 
----
+📑 Get Movies with Sorting:
+GET http://localhost:8080/api/v1/movie/allMoviesPageSort?sortBy=title
 
-- 🔗 **Add Movie:**
+📝 User Registration:
+POST http://localhost:8080/api/v1/auth/register
 
-  - `POST http://localhost:8080/api/v1/movie/add-movie`
+🔒 User Login:
+POST http://localhost:8080/api/v1/auth/login
 
-- 🔍 **Get All Movies:**
+🚀**Cloning the Project**
+Clone the Repository:
 
-  - `GET http://localhost:8080/api/v1/movie/all`
+bash
+Copy code
+git clone https://github.com/rahulkhandelwal/Movie_Api_Backend.git
+Navigate to the Project Directory:
 
-- 🔍 **Get Movie by ID:**
+bash
+Copy code
+cd Movie_Api_Backend
+Configure Application Properties:
 
-  - `GET http://localhost:8080/api/v1/movie/1`
+Edit src/main/resources/application.properties to update database connection details.
+Create MySQL Database:
 
-- 📁 **Get Profile Picture:**
+Run the SQL script located in src/main/resources/sql-scripts to create necessary tables:
+bash
+Copy code
+mysql -u your_username -p < create_database.sql
+Build and Run the Application:
 
-  - `GET http://localhost:8080/file/profile-pic`
+With Maven:
+bash
+Copy code
+./mvnw clean install
+./mvnw spring-boot:run
+Access the API Endpoints:
 
-- 🔄 **Update Movie by ID:**
+Explore the MovieAPI by navigating to the provided endpoints once the application is running.
+Enjoy working with the MovieAPI project! Manage movie data effortlessly and feel free to contribute or provide feedback. Happy coding! 🎬🍿
 
-  - `PUT http://localhost:8080/api/v1/movie/update/1`
+🌟 **Project Author**
+<span style="color:red;">rahul khandelwal</span>
+📧 Email: dynamicrahul952156@gmail.com
 
-- ❌ **Delete Movie by ID:**
+For inquiries, feedback, or collaboration opportunities regarding the MovieAPI project, please reach out. Your input is appreciated! 🚀
 
-  - `DELETE http://localhost:8080/api/v1/movie/delete/2`
-
-- 📑 **Get Movies with Pagination:**
-
-  - `GET http://localhost:8080/api/v1/movie/allMoviesPage?pageNumber=0&pageSize=2`
-
-- 📑 **Get Movies with Sorting:**
-
-  - `GET http://localhost:8080/api/v1/movie/allMoviesPageSort?sortBy=title`
-
-- 📝 **User Registration:**
-
-  - `POST http://localhost:8080/api/v1/auth/register`
-
-- 🔒 **User Login:**
-  - `POST http://localhost:8080/api/v1/auth/login`
-
-# 🚀 **Cloning the Project**
-
----
-
-To kickstart your journey with the MovieAPI project, follow these simple steps:
-
-1. **Clone the Repository:**
-
-   ```bash
-   git clone https://github.com/Vikashkatiyar/Movie_Api_Backend.git
-   ```
-
-2. **Navigate to the Project Directory:**
-
-   ```bash
-   cd Movie_Api_Backend
-   ```
-
-3. **Configure Application Properties:**
-
-   - Open `src/main/resources/application.properties`.
-   - Modify the database connection details to match your MySQL setup.
-
-4. **Create MySQL Database:**
-
-   - Execute the SQL script provided in `src/main/resources/sql-scripts` to set up the necessary database tables.
-     ```bash
-     mysql -u your_username -p < create_database.sql
-     ```
-
-5. **Build and Run the Application:**
-
-   - Using Maven:
-     ```bash
-     ./mvnw clean install
-     ./mvnw spring-boot:run
-     ```
-
-6. **Access the API Endpoints:**
-   - Once the application is running, explore the MovieAPI by accessing the defined endpoints.
-
-Now you're all set! Dive into the MovieAPI project, manage movie-related data effortlessly, and feel free to contribute or report issues. Happy coding! 🎬🍿
-
-# 🌟 **Project Author**
-
-## **<span style="color:red;">Vikash Katiyar</span>**
-
-📧 **Email:** vikashktr018@gmail.com
-
-Feel free to reach out to the author for any inquiries, feedback, or collaboration opportunities related to the MovieAPI project. Your input is valuable! 🚀
